@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://c1f32rccug6fd"]
+
+[ext_resource type="Texture2D" uid="uid://d3nvyfinmr3w5" path="res://1000_F_529266429_1atYi9eEHoiYmlQwSJyNGObrrH9I5NOs-removebg-preview.png" id="1_f7cmv"]
+[ext_resource type="Texture2D" uid="uid://7hwlwwy80vrg" path="res://images.jpeg" id="1_mehiu"]
+[ext_resource type="Texture2D" uid="uid://d2ykuxmbcl5hl" path="res://mole machine.png" id="2_lt4yx"]
+[ext_resource type="Texture2D" uid="uid://ccancmmqvrojv" path="res://image_1125-removebg-preview.png" id="3_lt4yx"]
+[ext_resource type="Script" uid="uid://ck0qn0bqhxk2j" path="res://Gun.gd" id="4_lk3y4"]
+[ext_resource type="Texture2D" uid="uid://bp6umqqcwgjv0" path="res://image_2026-11-14_130338650.png" id="5_51p13"]
+[ext_resource type="Texture2D" uid="uid://darfl3cddydvj" path="res://icon.svg" id="7_q2pai"]
+[ext_resource type="Script" uid="uid://cmho4mc62fsv" path="res://Gunshot.gd" id="8_w12x5"]
+
+[node name="Node" type="Node" unique_id=1062756409]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1171308771]
+position = Vector2(577.5, 327.5)
+scale = Vector2(1.6887906, 1.4269911)
+texture = ExtResource("1_mehiu")
+
+[node name="Gamibling Machine" type="Sprite2D" parent="." unique_id=1026432947]
+position = Vector2(583, 431.00003)
+scale = Vector2(0.7797008, 0.5617595)
+texture = ExtResource("2_lt4yx")
+
+[node name="Angel" type="Sprite2D" parent="." unique_id=1048904964]
+position = Vector2(422.00003, 415.99994)
+scale = Vector2(0.29820248, 0.36519617)
+texture = ExtResource("3_lt4yx")
+
+[node name="Demon" type="Sprite2D" parent="." unique_id=1655717533]
+position = Vector2(778, 506)
+scale = Vector2(0.20833336, 0.19656251)
+texture = ExtResource("5_51p13")
+
+[node name="Gun" type="Sprite2D" parent="." unique_id=493667617]
+position = Vector2(905, 482.99997)
+scale = Vector2(1.521563, 1.5738934)
+texture = ExtResource("1_f7cmv")
+script = ExtResource("4_lk3y4")
+
+[node name="Gunshot" type="Sprite2D" parent="." unique_id=1464307552]
+texture = ExtResource("7_q2pai")
+script = ExtResource("8_w12x5")
