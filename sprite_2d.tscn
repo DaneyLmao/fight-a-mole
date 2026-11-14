@@ -3,11 +3,21 @@
 [ext_resource type="Texture2D" uid="uid://d3nvyfinmr3w5" path="res://1000_F_529266429_1atYi9eEHoiYmlQwSJyNGObrrH9I5NOs-removebg-preview.png" id="1_f7cmv"]
 [ext_resource type="Texture2D" uid="uid://7hwlwwy80vrg" path="res://images.jpeg" id="1_mehiu"]
 [ext_resource type="Texture2D" uid="uid://d2ykuxmbcl5hl" path="res://mole machine.png" id="2_lt4yx"]
+[ext_resource type="Script" uid="uid://dqno1lvkmf7b1" path="res://Angel.gd" id="3_dbwip"]
 [ext_resource type="Texture2D" uid="uid://ccancmmqvrojv" path="res://image_1125-removebg-preview.png" id="3_lt4yx"]
 [ext_resource type="Script" uid="uid://ck0qn0bqhxk2j" path="res://Gun.gd" id="4_lk3y4"]
 [ext_resource type="Texture2D" uid="uid://bp6umqqcwgjv0" path="res://image_2026-11-14_130338650.png" id="5_51p13"]
+[ext_resource type="Script" uid="uid://0q68fxycimyn" path="res://Demon.gd" id="5_gcgl3"]
 [ext_resource type="Texture2D" uid="uid://darfl3cddydvj" path="res://icon.svg" id="7_q2pai"]
 [ext_resource type="Script" uid="uid://cmho4mc62fsv" path="res://Gunshot.gd" id="8_w12x5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pm6lt"]
+size = Vector2(4.0489616, 1.7836676)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_acmuj"]
+size = Vector2(46.508003, 1.9160726)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pm6lt"]
 
 [node name="Node" type="Node" unique_id=1062756409]
 
@@ -21,15 +31,34 @@ position = Vector2(583, 431.00003)
 scale = Vector2(0.7797008, 0.5617595)
 texture = ExtResource("2_lt4yx")
 
-[node name="Angel" type="Sprite2D" parent="." unique_id=1048904964]
+[node name="AngelArea" type="Area2D" parent="." unique_id=810197337 groups=["targets"]]
 position = Vector2(422.00003, 415.99994)
-scale = Vector2(0.29820248, 0.36519617)
+scale = Vector2(0.29820246, 0.3651962)
+script = ExtResource("3_dbwip")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AngelArea" unique_id=1092500288]
+position = Vector2(10.060181, 8.214966)
+scale = Vector2(79.50902, 116.67387)
+shape = SubResource("RectangleShape2D_pm6lt")
+
+[node name="Angel" type="Sprite2D" parent="AngelArea" unique_id=1048904964]
+scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("3_lt4yx")
 
-[node name="Demon" type="Sprite2D" parent="." unique_id=1655717533]
-position = Vector2(778, 506)
-scale = Vector2(0.20833336, 0.19656251)
+[node name="DemonArea" type="Area2D" parent="." unique_id=1924989392 groups=["targets"]]
+position = Vector2(422.00006, 415.99994)
+scale = Vector2(0.29820248, 0.36519623)
+script = ExtResource("5_gcgl3")
+
+[node name="Demon" type="Sprite2D" parent="DemonArea" unique_id=1655717533]
+position = Vector2(1193.8195, 246.443)
+scale = Vector2(0.6986306, 0.5382381)
 texture = ExtResource("5_51p13")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DemonArea" unique_id=1063293512]
+position = Vector2(1220.6469, 224.53711)
+scale = Vector2(11.392474, -148.62614)
+shape = SubResource("RectangleShape2D_acmuj")
 
 [node name="Gun" type="Sprite2D" parent="." unique_id=493667617]
 position = Vector2(905, 482.99997)
@@ -37,6 +66,24 @@ scale = Vector2(1.521563, 1.5738934)
 texture = ExtResource("1_f7cmv")
 script = ExtResource("4_lk3y4")
 
-[node name="Gunshot" type="Sprite2D" parent="." unique_id=1464307552]
+[node name="Area2D" type="Area2D" parent="." unique_id=438861588]
+position = Vector2(-159, 238.5)
+scale = Vector2(0.37499997, 0.35156247)
+
+[node name="Gunshot" type="Sprite2D" parent="Area2D" unique_id=1464307552]
+scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("7_q2pai")
 script = ExtResource("8_w12x5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=160921093]
+scale = Vector2(6.973336, 6.006222)
+shape = SubResource("CircleShape2D_pm6lt")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2100982131]
+offset_left = -594.0
+offset_top = 90.99999
+offset_right = -455.0
+offset_bottom = 131.0
+scale = Vector2(3.972328, 4.4776073)
+text = "This is a gunshot ->"
+visible_characters_behavior = 1
