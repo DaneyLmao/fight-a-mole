@@ -35,3 +35,4 @@ func _input(event: InputEvent) -> void:
 		recoil_tween.tween_property(self, "rotation_degrees", 30.0, 0.08).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 		# 2. Ease back down to 0 degrees (over 0.42s, totaling 0.5s)
 		recoil_tween.tween_property(self, "rotation_degrees", 0.0, 0.42).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
+	
