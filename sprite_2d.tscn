@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://0q68fxycimyn" path="res://Demon.gd" id="5_gcgl3"]
 [ext_resource type="Texture2D" uid="uid://darfl3cddydvj" path="res://icon.svg" id="7_q2pai"]
 [ext_resource type="Script" uid="uid://cmho4mc62fsv" path="res://Gunshot.gd" id="8_w12x5"]
+[ext_resource type="Script" uid="uid://3atf7pe6u1ph" path="res://popup.gd" id="11_gcgl3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pm6lt"]
 size = Vector2(4.0489616, 1.7836676)
@@ -31,13 +32,12 @@ position = Vector2(583, 431.00003)
 scale = Vector2(0.7797008, 0.5617595)
 texture = ExtResource("2_lt4yx")
 
-[node name="AngelArea" type="Area2D" parent="." unique_id=810197337 groups=["targets"]]
-position = Vector2(422.00003, 415.99994)
+[node name="AngelArea" type="Area2D" parent="." unique_id=810197337 node_paths=PackedStringArray("spawn_cycle") groups=["targets"]]
 scale = Vector2(0.29820246, 0.3651962)
 script = ExtResource("3_dbwip")
+spawn_cycle = NodePath("../Spawn Cycle")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AngelArea" unique_id=1092500288]
-position = Vector2(10.060181, 8.214966)
 scale = Vector2(79.50902, 116.67387)
 shape = SubResource("RectangleShape2D_pm6lt")
 
@@ -45,18 +45,16 @@ shape = SubResource("RectangleShape2D_pm6lt")
 scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("3_lt4yx")
 
-[node name="DemonArea" type="Area2D" parent="." unique_id=1924989392 groups=["targets"]]
-position = Vector2(422.00006, 415.99994)
+[node name="DemonArea" type="Area2D" parent="." unique_id=1924989392 node_paths=PackedStringArray("spawn_cycle") groups=["targets"]]
 scale = Vector2(0.29820248, 0.36519623)
 script = ExtResource("5_gcgl3")
+spawn_cycle = NodePath("../Spawn Cycle")
 
 [node name="Demon" type="Sprite2D" parent="DemonArea" unique_id=1655717533]
-position = Vector2(1193.8195, 246.443)
 scale = Vector2(0.6986306, 0.5382381)
 texture = ExtResource("5_51p13")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DemonArea" unique_id=1063293512]
-position = Vector2(1220.6469, 224.53711)
 scale = Vector2(11.392474, -148.62614)
 shape = SubResource("RectangleShape2D_acmuj")
 
@@ -87,3 +85,54 @@ offset_bottom = 131.0
 scale = Vector2(3.972328, 4.4776073)
 text = "This is a gunshot ->"
 visible_characters_behavior = 1
+
+[node name="Spawn Cycle" type="Node2D" parent="." unique_id=760235775 node_paths=PackedStringArray("spawn_points_parent", "demon", "angel", "timer", "score_label")]
+script = ExtResource("11_gcgl3")
+spawn_points_parent = NodePath("Cycle/Node2D")
+demon = NodePath("../DemonArea")
+angel = NodePath("../AngelArea")
+timer = NodePath("Cycle")
+score_label = NodePath("../UI/ScoreLabel")
+
+[node name="Cycle" type="Timer" parent="Spawn Cycle" unique_id=1040523257]
+wait_time = 1.5
+autostart = true
+
+[node name="Node2D" type="Node2D" parent="Spawn Cycle/Cycle" unique_id=1655788203]
+position = Vector2(707, 400)
+
+[node name="Mark 1" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=1835332044]
+position = Vector2(-332, 118)
+
+[node name="Mark 2" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=267457590]
+position = Vector2(-135, 113)
+
+[node name="Mark 3" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=1941249202]
+position = Vector2(66, 116)
+
+[node name="Mark 4" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=1108746892]
+position = Vector2(-283, 38)
+
+[node name="Mark 5" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=1231564611]
+position = Vector2(-127, 39)
+
+[node name="Mark 6" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=1548426072]
+position = Vector2(24, 40)
+
+[node name="Mark 7" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=1687412170]
+position = Vector2(-256, -2)
+
+[node name="Mark 8" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=143340396]
+position = Vector2(-127, -1)
+
+[node name="Mark 9" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=2122005663]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1333481089]
+
+[node name="ScoreLabel" type="Label" parent="UI" unique_id=1819632158]
+offset_left = 28.0
+offset_top = 26.0
+offset_right = 405.0
+offset_bottom = 163.0
+theme_override_font_sizes/font_size = 100
+text = "Score: 0"
