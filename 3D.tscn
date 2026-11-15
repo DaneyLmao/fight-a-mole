@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d3nvyfinmr3w5" path="res://1000_F_529266429_1atYi9eEHoiYmlQwSJyNGObrrH9I5NOs-removebg-preview.png" id="4_nhkuo"]
 [ext_resource type="Script" uid="uid://blax5p7bqirbx" path="res://tracker3d.gd" id="5_vwhn5"]
 [ext_resource type="Texture2D" uid="uid://dv747ov6fcrsg" path="res://addons/JehenoAdvancedFirstPersonController/PlayerCharacter/HUD/crosshair.png" id="6_01ym8"]
+[ext_resource type="ArrayMesh" uid="uid://cke4ujpll0utr" path="res://tinker.obj" id="8_160f7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jkk2y"]
 albedo_texture = ExtResource("2_jltlb")
@@ -81,7 +82,7 @@ material = SubResource("StandardMaterial3D_yqkub")
 metadata/_edit_group_ = true
 
 [node name="Floor2" type="CSGBox3D" parent="Room" unique_id=684589415]
-transform = Transform3D(16.005993, 0, 0, 0, 0.9999998, 0, 0, 0, 15.999996, -16, 0, -16)
+transform = Transform3D(16.005991, 0, 0, 0, 0.9999998, 0, 0, 0, 15.999995, -15.999999, 0, -15.999999)
 use_collision = true
 material = SubResource("StandardMaterial3D_jltlb")
 metadata/_edit_group_ = true
@@ -232,3 +233,7 @@ texture = ExtResource("6_01ym8")
 [node name="bad" type="CSGBox3D" parent="." unique_id=620271796]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -36.500652)
 use_collision = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1642843570]
+transform = Transform3D(0.022943057, -0.03276608, -1.4322509e-09, 0, -1.7484555e-09, 0.04, -0.03276608, -0.022943057, -1.0028729e-09, -21.03, 0, -12.229)
+mesh = ExtResource("8_160f7")
