@@ -8,7 +8,7 @@ var was_hit: bool = false
 
 func hit() -> void:
 	was_hit = true # Mark that the player shot it successfully!
-	%mole_died2.play()
+	$mole_died2.play()
 	print("You're Such A Good Boy Aren't You?")
 	if spawn_cycle:
 		spawn_cycle.add_score(point_value)

@@ -72,6 +72,7 @@ spawn_cycle = NodePath("../Spawn Cycle")
 [node name="mole_died" type="AudioStreamPlayer2D" parent="AngelArea" unique_id=680141058]
 position = Vector2(-831.6499, -394.30865)
 scale = Vector2(3.3534267, 2.7382543)
+stream = ExtResource("23_3ymp8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AngelArea" unique_id=1092500288]
 scale = Vector2(79.50902, 116.67387)
@@ -105,6 +106,7 @@ shape = SubResource("RectangleShape2D_acmuj")
 [node name="mole_died2" type="AudioStreamPlayer2D" parent="DemonArea" unique_id=915900707]
 position = Vector2(-5.1169223e-05, 0)
 scale = Vector2(3.3534267, 2.7382543)
+stream = ExtResource("23_3ymp8")
 
 [node name="MoleMachine1" type="Sprite2D" parent="." unique_id=263846383]
 light_mask = 64
@@ -281,6 +283,7 @@ spawn_cycle = NodePath("../Spawn Cycle")
 
 [node name="Background" type="AudioStreamPlayer" parent="Sounds" unique_id=1480556175]
 stream = ExtResource("22_w7wq1")
+autoplay = true
 
 [node name="gunshot" type="AudioStreamPlayer2D" parent="Sounds" unique_id=2133493740]
 

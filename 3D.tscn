@@ -226,6 +226,7 @@ script = ExtResource("8_jwkbx")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="CharacterBody3D" unique_id=1959585154]
 stream = ExtResource("8_7631t")
+autoplay = true
 
 [node name="bad" type="CSGBox3D" parent="CharacterBody3D" unique_id=620271796]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
