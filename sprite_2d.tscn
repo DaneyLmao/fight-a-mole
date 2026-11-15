@@ -41,6 +41,13 @@ position = Vector2(583, 431)
 scale = Vector2(0.78, 0.562)
 texture = ExtResource("2_f166j")
 
+[node name="MoleMachine3" type="Sprite2D" parent="." unique_id=81486368]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(583, 431)
+scale = Vector2(0.78, 0.562)
+texture = ExtResource("5_hltx7")
+
 [node name="AngelArea" type="Area2D" parent="." unique_id=810197337 node_paths=PackedStringArray("spawn_cycle") groups=["targets"]]
 scale = Vector2(0.29820246, 0.3651962)
 script = ExtResource("3_dbwip")
@@ -54,10 +61,12 @@ shape = SubResource("RectangleShape2D_pm6lt")
 scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("3_lt4yx")
 
-[node name="MoleMachine3" type="Sprite2D" parent="." unique_id=81486368]
+[node name="MoleMachine2" type="Sprite2D" parent="." unique_id=378022337]
+light_mask = 16
+visibility_layer = 16
 position = Vector2(583, 431)
 scale = Vector2(0.78, 0.562)
-texture = ExtResource("5_hltx7")
+texture = ExtResource("8_shsg8")
 
 [node name="DemonArea" type="Area2D" parent="." unique_id=1924989392 node_paths=PackedStringArray("spawn_cycle") groups=["targets"]]
 scale = Vector2(0.29820248, 0.36519623)
@@ -72,17 +81,15 @@ texture = ExtResource("5_51p13")
 scale = Vector2(11.392474, -148.62614)
 shape = SubResource("RectangleShape2D_acmuj")
 
-[node name="MoleMachine2" type="Sprite2D" parent="." unique_id=378022337]
-position = Vector2(583, 431)
-scale = Vector2(0.78, 0.562)
-texture = ExtResource("8_shsg8")
-
 [node name="MoleMachine1" type="Sprite2D" parent="." unique_id=263846383]
+light_mask = 64
+visibility_layer = 64
 position = Vector2(583, 431)
 scale = Vector2(0.78, 0.562)
 texture = ExtResource("9_ikdaa")
 
 [node name="Spawn Cycle" type="Node2D" parent="." unique_id=760235775 node_paths=PackedStringArray("spawn_points_parent", "demon", "angel", "timer", "score_label")]
+position = Vector2(7, 5)
 script = ExtResource("11_gcgl3")
 spawn_points_parent = NodePath("Cycle/Node2D")
 demon = NodePath("../DemonArea")
@@ -98,30 +105,48 @@ autostart = true
 position = Vector2(707, 400)
 
 [node name="Mark 1" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=1835332044]
-position = Vector2(-332, 118)
+light_mask = 32
+visibility_layer = 32
+position = Vector2(-333, 102)
 
 [node name="Mark 2" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=267457590]
-position = Vector2(-135, 113)
+light_mask = 32
+visibility_layer = 32
+position = Vector2(-136, 97)
 
 [node name="Mark 3" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=1941249202]
-position = Vector2(66, 116)
+light_mask = 32
+visibility_layer = 32
+position = Vector2(65, 100)
 
 [node name="Mark 4" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=1108746892]
+light_mask = 8
+visibility_layer = 8
 position = Vector2(-283, 38)
 
 [node name="Mark 5" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=1231564611]
+light_mask = 8
+visibility_layer = 8
 position = Vector2(-127, 39)
 
 [node name="Mark 6" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=1548426072]
+light_mask = 8
+visibility_layer = 8
 position = Vector2(24, 40)
 
 [node name="Mark 7" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=1687412170]
+light_mask = 2
+visibility_layer = 2
 position = Vector2(-256, -2)
 
 [node name="Mark 8" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=143340396]
+light_mask = 2
+visibility_layer = 2
 position = Vector2(-127, -1)
 
 [node name="Mark 9" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=2122005663]
+light_mask = 2
+visibility_layer = 2
 
 [node name="Gun" type="Sprite2D" parent="." unique_id=493667617]
 position = Vector2(905, 482.99997)
