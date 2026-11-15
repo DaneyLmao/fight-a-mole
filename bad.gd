@@ -2,8 +2,8 @@ extends CharacterBody3D
 
 @export var move_speed: float = 4.5
 @export var strafe_speed: float = 3.0
-@export var max_attack_range: float = 12.0 # Starts strafing within 12 meters
-@export var min_retreat_range: float = 5.0 # Backs up if player is within 5 meters
+@export var max_attack_range: float = 0.0 # Starts strafing within 12 meters
+@export var min_retreat_range: float = 0.0 # Backs up if player is within 5 meters
 
 @onready var line_of_sight: RayCast3D = $RayCast3D
 
