@@ -14,6 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://duc2i0jc270tv" path="res://mole machine 1.png" id="9_ikdaa"]
 [ext_resource type="Texture2D" uid="uid://ctudhgp2yk54r" path="res://mole machine (holes only).png" id="10_v7144"]
 [ext_resource type="Script" uid="uid://3atf7pe6u1ph" path="res://popup.gd" id="11_gcgl3"]
+[ext_resource type="Script" uid="uid://dw84ej2opd3j4" path="res://healthbar.gd" id="15_shsg8"]
+[ext_resource type="Texture2D" uid="uid://b8kbqtys7e3ba" path="res://full_heart.png" id="16_ikdaa"]
+[ext_resource type="Texture2D" uid="uid://b1fer326pbsph" path="res://empty_heart.png" id="17_v7144"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pm6lt"]
 size = Vector2(4.0489616, 1.7836676)
@@ -162,3 +165,25 @@ theme_override_font_sizes/font_size = 100
 text = "Score: 0"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="UI/ScoreLabel" unique_id=275774743]
+
+[node name="Healthbar" type="HBoxContainer" parent="." unique_id=1648383419]
+offset_left = 817.0
+offset_top = -129.0
+offset_right = 945.0
+offset_bottom = -89.0
+scale = Vector2(2.4057, 10.654494)
+script = ExtResource("15_shsg8")
+full_heart = ExtResource("16_ikdaa")
+empty_heart = ExtResource("17_v7144")
+
+[node name="TextureRect2" type="TextureRect" parent="Healthbar" unique_id=496006931]
+layout_mode = 2
+expand_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Healthbar" unique_id=872684878]
+layout_mode = 2
+expand_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="Healthbar" unique_id=899076337]
+layout_mode = 2
+expand_mode = 2
