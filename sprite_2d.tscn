@@ -17,6 +17,8 @@
 [ext_resource type="Script" uid="uid://b6fga5v5mgwrk" path="res://health_component.gd" id="15_ikdaa"]
 [ext_resource type="Texture2D" uid="uid://b8kbqtys7e3ba" path="res://full_heart.png" id="16_ikdaa"]
 [ext_resource type="Script" uid="uid://dlqxau7kf5fdj" path="res://texturerect.health.gd" id="16_shsg8"]
+[ext_resource type="Script" uid="uid://ckj8dpf8ek81s" path="res://damage.fx.gd" id="18_ikdaa"]
+[ext_resource type="Script" uid="uid://dmjt4geois14o" path="res://menus.gd" id="19_v7144"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pm6lt"]
 size = Vector2(4.0489616, 1.7836676)
@@ -38,7 +40,7 @@ scale = Vector2(0.78, 0.562)
 texture = ExtResource("10_v7144")
 
 [node name="MoleMachine4" type="Sprite2D" parent="." unique_id=1200278768]
-position = Vector2(583, 431)
+position = Vector2(583, 431.5)
 scale = Vector2(0.78, 0.562)
 texture = ExtResource("2_f166j")
 
@@ -66,7 +68,7 @@ texture = ExtResource("3_lt4yx")
 [node name="MoleMachine2" type="Sprite2D" parent="." unique_id=378022337]
 light_mask = 16
 visibility_layer = 16
-position = Vector2(583, 431)
+position = Vector2(583, 430.5)
 scale = Vector2(0.78, 0.562)
 texture = ExtResource("8_shsg8")
 
@@ -87,16 +89,11 @@ shape = SubResource("RectangleShape2D_acmuj")
 [node name="MoleMachine1" type="Sprite2D" parent="." unique_id=263846383]
 light_mask = 64
 visibility_layer = 64
-position = Vector2(583, 431)
+position = Vector2(583, 430)
 scale = Vector2(0.78, 0.562)
 texture = ExtResource("9_ikdaa")
 
-<<<<<<< HEAD
-[node name="Spawn Cycle" type="Node2D" parent="." unique_id=760235775 node_paths=PackedStringArray("spawn_points_parent", "demon", "angel", "timer", "score_label")]
-position = Vector2(7, 5)
-=======
 [node name="Spawn Cycle" type="Node2D" parent="." unique_id=760235775 node_paths=PackedStringArray("spawn_points_parent", "demon", "angel", "timer", "score_label", "health_component")]
->>>>>>> fbfbc98f09612a11dee3ebc57f1ce34ac086465e
 script = ExtResource("11_gcgl3")
 spawn_points_parent = NodePath("Cycle/Node2D")
 demon = NodePath("../DemonArea")
@@ -197,6 +194,13 @@ text = "Score: 0"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="UI/ScoreLabel" unique_id=275774743]
 
+[node name="ColorRect" type="ColorRect" parent="UI" unique_id=46696135]
+visible = false
+offset_right = 1148.0
+offset_bottom = 649.0
+mouse_filter = 2
+color = Color(1, 0, 0, 1)
+
 [node name="HealthComponent" type="Node" parent="." unique_id=346553638]
 script = ExtResource("15_ikdaa")
 
@@ -235,3 +239,14 @@ offset_right = -3.9999695
 offset_bottom = 40.0
 texture = ExtResource("16_ikdaa")
 expand_mode = 2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=489753531 node_paths=PackedStringArray("health_component", "flash_rect")]
+offset = Vector2(576, 324)
+script = ExtResource("18_ikdaa")
+health_component = NodePath("../HealthComponent")
+flash_rect = NodePath("../UI/ColorRect")
+
+[node name="Menus" type="CanvasLayer" parent="." unique_id=1573699697 node_paths=PackedStringArray("health_component", "spawn_cycle")]
+script = ExtResource("19_v7144")
+health_component = NodePath("../HealthComponent")
+spawn_cycle = NodePath("../Spawn Cycle")
