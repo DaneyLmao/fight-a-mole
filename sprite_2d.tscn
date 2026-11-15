@@ -40,7 +40,7 @@ scale = Vector2(0.78, 0.562)
 texture = ExtResource("10_v7144")
 
 [node name="MoleMachine4" type="Sprite2D" parent="." unique_id=1200278768]
-position = Vector2(583, 431)
+position = Vector2(583, 431.5)
 scale = Vector2(0.78, 0.562)
 texture = ExtResource("2_f166j")
 
@@ -68,7 +68,7 @@ texture = ExtResource("3_lt4yx")
 [node name="MoleMachine2" type="Sprite2D" parent="." unique_id=378022337]
 light_mask = 16
 visibility_layer = 16
-position = Vector2(583, 431)
+position = Vector2(583, 430.5)
 scale = Vector2(0.78, 0.562)
 texture = ExtResource("8_shsg8")
 
@@ -89,7 +89,7 @@ shape = SubResource("RectangleShape2D_acmuj")
 [node name="MoleMachine1" type="Sprite2D" parent="." unique_id=263846383]
 light_mask = 64
 visibility_layer = 64
-position = Vector2(583, 431)
+position = Vector2(583, 430)
 scale = Vector2(0.78, 0.562)
 texture = ExtResource("9_ikdaa")
 
@@ -195,6 +195,7 @@ text = "Score: 0"
 [node name="CanvasLayer" type="CanvasLayer" parent="UI/ScoreLabel" unique_id=275774743]
 
 [node name="ColorRect" type="ColorRect" parent="UI" unique_id=46696135]
+visible = false
 offset_right = 1148.0
 offset_bottom = 649.0
 mouse_filter = 2
