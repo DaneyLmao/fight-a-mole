@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://brmr2e251fdgh" path="res://score_label_3D.gd" id="8_ty56h"]
 [ext_resource type="PackedScene" uid="uid://elqevfp5xn1x" path="res://Paya Bossman.glb" id="9_d2l6o"]
 [ext_resource type="Script" uid="uid://dlqxau7kf5fdj" path="res://texturerect.health.gd" id="9_ty56h"]
+[ext_resource type="Texture2D" uid="uid://cnvlvk7hhlhi8" path="res://mole mask.png" id="10_8sb86"]
 [ext_resource type="Texture2D" uid="uid://b8kbqtys7e3ba" path="res://full_heart.png" id="10_jwkbx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jkk2y"]
@@ -224,21 +225,25 @@ script = ExtResource("5_vwhn5")
 [node name="RayCast3D" type="RayCast3D" parent="Player/CharacterBody3D/Node3D/Camera3D" unique_id=1187540317]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -100)
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=444730965]
+[node name="Paya" type="CharacterBody3D" parent="." unique_id=444730965]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08622579, 0)
 script = ExtResource("8_jwkbx")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="CharacterBody3D" unique_id=1959585154]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Paya" unique_id=1959585154]
 stream = ExtResource("8_7631t")
 
-[node name="Paya Bossman" parent="CharacterBody3D" unique_id=2073370644 instance=ExtResource("9_d2l6o")]
+[node name="Paya Bossman" parent="Paya" unique_id=2073370644 instance=ExtResource("9_d2l6o")]
 transform = Transform3D(4, 0, 0, 0, 3.994518, 0.20934384, 0, -0.20934384, 3.994518, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1109406893]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Paya" unique_id=1109406893]
 transform = Transform3D(0.819, 0, 0, 0, 0.81, 0, 0, 0, 0.816, -0.105648935, 1.6610703, 0.23553908)
 shape = SubResource("CapsuleShape3D_pm6lt")
 
-[node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D" unique_id=1537555555]
+[node name="RayCast3D" type="RayCast3D" parent="Paya" unique_id=1537555555]
+
+[node name="Sprite3D" type="Sprite3D" parent="Paya" unique_id=1098602257]
+transform = Transform3D(0.09287493, 0, 0, 0, 0.12079511, -0.02430179, 0, 0.019832253, 0.14801832, 0, 3.3857024, 0.051068366)
+texture = ExtResource("10_8sb86")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1858504505]
 
