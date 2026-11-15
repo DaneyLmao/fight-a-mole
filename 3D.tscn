@@ -178,7 +178,7 @@ metadata/_edit_group_ = true
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=605706194]
 transform = Transform3D(0.6671166, 0, 0.74495333, 0, 1, 0, -0.74495333, 0, 0.6671166, -19.285892, 2.325368, -12.376642)
-light_energy = 1.64
+light_energy = 0.475
 light_indirect_energy = 16.0
 light_volumetric_fog_energy = 16.0
 light_size = 10.0
@@ -236,4 +236,6 @@ use_collision = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1642843570]
 transform = Transform3D(0.022943057, -0.03276608, -1.4322509e-09, 0, -1.7484555e-09, 0.04, -0.03276608, -0.022943057, -1.0028729e-09, -21.03, 0, -12.229)
+gi_mode = 2
+gi_lightmap_texel_scale = 16.0
 mesh = ExtResource("8_160f7")
