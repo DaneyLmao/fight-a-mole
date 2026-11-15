@@ -1,264 +1,211 @@
 [gd_scene format=3 uid="uid://c1f32rccug6fd"]
 
+[ext_resource type="Texture2D" uid="uid://d03kd5bhaypto" path="res://2d backdrop.png" id="1_75u5r"]
 [ext_resource type="Texture2D" uid="uid://d3nvyfinmr3w5" path="res://1000_F_529266429_1atYi9eEHoiYmlQwSJyNGObrrH9I5NOs-removebg-preview.png" id="1_f7cmv"]
-[ext_resource type="Texture2D" uid="uid://d2ykuxmbcl5hl" path="res://mole machine.png" id="1_iqeq5"]
-[ext_resource type="Texture2D" uid="uid://7hwlwwy80vrg" path="res://images.jpeg" id="2_f166j"]
-[ext_resource type="Script" uid="uid://br46cx7tyq28t" path="res://smooth.movin.gd" id="3_hltx7"]
-[ext_resource type="Script" uid="uid://deq5ey3iuvnaf" path="res://goodaim.gd" id="4_shsg8"]
-[ext_resource type="Script" uid="uid://blax5p7bqirbx" path="res://tracker3d.gd" id="6_ikdaa"]
-[ext_resource type="Script" uid="uid://befwidj11vl42" path="res://bad.gd" id="7_v7144"]
-[ext_resource type="AudioStream" uid="uid://dmbud1q2prua7" path="res://molarity.ogg" id="8_75u5r"]
-[ext_resource type="PackedScene" uid="uid://elqevfp5xn1x" path="res://Paya Bossman.glb" id="9_st8jt"]
-[ext_resource type="Texture2D" uid="uid://dv747ov6fcrsg" path="res://addons/JehenoAdvancedFirstPersonController/PlayerCharacter/HUD/crosshair.png" id="10_w7wq1"]
+[ext_resource type="Texture2D" uid="uid://yfo001dc8x4e" path="res://mole machine 4.png" id="2_f166j"]
+[ext_resource type="Script" uid="uid://dqno1lvkmf7b1" path="res://Angel.gd" id="3_dbwip"]
+[ext_resource type="Texture2D" uid="uid://ccancmmqvrojv" path="res://image_1125-removebg-preview.png" id="3_lt4yx"]
+[ext_resource type="Script" uid="uid://ck0qn0bqhxk2j" path="res://Gun.gd" id="4_lk3y4"]
+[ext_resource type="Texture2D" uid="uid://bp6umqqcwgjv0" path="res://image_2026-11-14_130338650.png" id="5_51p13"]
+[ext_resource type="Script" uid="uid://0q68fxycimyn" path="res://Demon.gd" id="5_gcgl3"]
+[ext_resource type="Texture2D" uid="uid://vk4pisym2d5u" path="res://mole machine 3.png" id="5_hltx7"]
+[ext_resource type="Texture2D" uid="uid://cax6vf53b0tgj" path="res://mole machine 2.png" id="8_shsg8"]
+[ext_resource type="Script" uid="uid://cmho4mc62fsv" path="res://Gunshot.gd" id="8_w12x5"]
+[ext_resource type="Texture2D" uid="uid://duc2i0jc270tv" path="res://mole machine 1.png" id="9_ikdaa"]
+[ext_resource type="Texture2D" uid="uid://ctudhgp2yk54r" path="res://mole machine (holes only).png" id="10_v7144"]
+[ext_resource type="Script" uid="uid://3atf7pe6u1ph" path="res://popup.gd" id="11_gcgl3"]
+[ext_resource type="Texture2D" uid="uid://cvybju1gmxh8r" path="res://acid splash.png" id="13_shsg8"]
 [ext_resource type="Script" uid="uid://b6fga5v5mgwrk" path="res://health_component.gd" id="15_ikdaa"]
 [ext_resource type="Texture2D" uid="uid://b8kbqtys7e3ba" path="res://full_heart.png" id="16_ikdaa"]
 [ext_resource type="Script" uid="uid://dlqxau7kf5fdj" path="res://texturerect.health.gd" id="16_shsg8"]
 [ext_resource type="Script" uid="uid://brmr2e251fdgh" path="res://score_label_3D.gd" id="16_st8jt"]
+[ext_resource type="Shader" uid="uid://brhan5i3b03hy" path="res://vignette.gdshader" id="17_3ymp8"]
+[ext_resource type="Script" uid="uid://ckj8dpf8ek81s" path="res://damage.fx.gd" id="18_ikdaa"]
+[ext_resource type="Script" uid="uid://dmjt4geois14o" path="res://menus.gd" id="19_v7144"]
+[ext_resource type="AudioStream" uid="uid://bv0mwsye3sqxq" path="res://6.022x10^23.ogg" id="22_w7wq1"]
+[ext_resource type="AudioStream" uid="uid://bytrgx35af7wa" path="res://PayaLaughEvil.ogg" id="23_3ymp8"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jkk2y"]
-albedo_texture = ExtResource("1_iqeq5")
-refraction_enabled = true
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pm6lt"]
+size = Vector2(4.0489616, 1.7836676)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jltlb"]
-albedo_texture = ExtResource("2_f166j")
-uv1_scale = Vector3(4, 4, 4)
-uv1_triplanar = true
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_acmuj"]
+size = Vector2(46.508003, 1.9160726)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yqkub"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_pm6lt"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yqkub"]
-height = 3.2890625
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3ymp8"]
+shader = ExtResource("17_3ymp8")
+shader_parameter/vignette_color = Color(0, 0, 0, 1)
+shader_parameter/inner_radius = 0.4
+shader_parameter/outer_radius = 1.0
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pm6lt"]
-radius = 0.67285156
-height = 4.1467285
+[node name="Node" type="Node" unique_id=1062756409]
 
-[node name="Node" type="Node" unique_id=1214921645]
+[node name="Background" type="Sprite2D" parent="." unique_id=1171308771]
+position = Vector2(569.78723, 324)
+scale = Vector2(0.7503753, 0.63405085)
+texture = ExtResource("1_75u5r")
 
-[node name="Room" type="Node3D" parent="." unique_id=2093177920]
-transform = Transform3D(1, 0, 0, 0, 0.099653065, 0, 0, 0, 1, 0, 0, 0)
+[node name="MoleMachine(holesOnly)" type="Sprite2D" parent="." unique_id=314014585]
+position = Vector2(583, 431)
+scale = Vector2(0.78, 0.562)
+texture = ExtResource("10_v7144")
 
-[node name="Gambling Machine" type="Node3D" parent="Room" unique_id=947553615]
-transform = Transform3D(0.99999994, 0, 0, 0, 10.034814, 0, 0, 0, 0.99999994, 0, 0, 0)
+[node name="MoleMachine4" type="Sprite2D" parent="." unique_id=1200278768]
+position = Vector2(583, 431.5)
+scale = Vector2(0.78, 0.562)
+texture = ExtResource("2_f166j")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="Room/Gambling Machine" unique_id=441195791]
-transform = Transform3D(0.57749486, -0.8157528, -0.0023310105, 0, -0.0020699182, 1.3783184, -0.8163943, -0.57704103, -0.0016488923, -21.548, 2.881, -9.523)
-sorting_offset = 0.5
-gi_mode = 2
-gi_lightmap_texel_scale = 5.0959
-use_collision = true
-size = Vector3(1.9578857, 4.6845093, 4.073181)
-material = SubResource("StandardMaterial3D_jkk2y")
-metadata/_edit_group_ = true
+[node name="MoleMachine3" type="Sprite2D" parent="." unique_id=81486368]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(583, 431)
+scale = Vector2(0.78, 0.562)
+texture = ExtResource("5_hltx7")
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="Room/Gambling Machine" unique_id=2076397879]
-transform = Transform3D(0.57749486, -0.8157528, -0.0023310105, 0, -0.0020699182, 1.3783184, -0.8163943, -0.57704103, -0.0016488923, -21.768103, 5.2994595, -9.543893)
-use_collision = true
-size = Vector3(2.1733398, 10.070999, 8.332886)
-metadata/_edit_group_ = true
+[node name="AngelArea" type="Area2D" parent="." unique_id=810197337 node_paths=PackedStringArray("spawn_cycle") groups=["targets"]]
+position = Vector2(248.00003, 144.00002)
+scale = Vector2(0.29820246, 0.3651962)
+script = ExtResource("3_dbwip")
+spawn_cycle = NodePath("../Spawn Cycle")
 
-[node name="Floor1" type="CSGBox3D" parent="Room" unique_id=1647733880]
-transform = Transform3D(16.005997, 0, 0, 0, 0.9999999, 0, 0, 0, 15.999998, 0, 0, 0)
-use_collision = true
-material = SubResource("StandardMaterial3D_jltlb")
-metadata/_edit_group_ = true
+[node name="mole_died" type="AudioStreamPlayer2D" parent="AngelArea" unique_id=680141058]
+position = Vector2(-831.6499, -394.30865)
+scale = Vector2(3.3534267, 2.7382543)
+stream = ExtResource("23_3ymp8")
 
-[node name="Wall1" type="CSGBox3D" parent="Room" unique_id=463006419]
-transform = Transform3D(16.005651, 0, 0, 0, 15.999997, 0, 0, 0, 15.9998255, -8.763869, 51.32837, -0.037985783)
-use_collision = true
-size = Vector3(0.11669922, 6.671875, 1)
-material = SubResource("StandardMaterial3D_yqkub")
-metadata/_edit_group_ = true
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AngelArea" unique_id=1092500288]
+scale = Vector2(79.50902, 116.67387)
+shape = SubResource("RectangleShape2D_pm6lt")
 
-[node name="Wall2" type="CSGBox3D" parent="Room" unique_id=141234662]
-transform = Transform3D(16.005995, 0, 0, 0, 15.999997, 0, 0, 0, 15.999997, 8, 53, 0)
-use_collision = true
-size = Vector3(0.005859375, 6.671875, 1)
-material = SubResource("StandardMaterial3D_yqkub")
-metadata/_edit_group_ = true
+[node name="Angel" type="Sprite2D" parent="AngelArea" unique_id=1048904964]
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("3_lt4yx")
 
-[node name="Wall3" type="CSGBox3D" parent="Room" unique_id=1038029029]
-transform = Transform3D(-6.9964426e-07, 0, 15.999997, 0, 15.999997, 0, -16.005995, 0, -6.993821e-07, 0, 53, 8)
-use_collision = true
-size = Vector3(0.005859375, 6.671875, 1)
-material = SubResource("StandardMaterial3D_yqkub")
-metadata/_edit_group_ = true
+[node name="MoleMachine2" type="Sprite2D" parent="." unique_id=378022337]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(583, 430.5)
+scale = Vector2(0.78, 0.562)
+texture = ExtResource("8_shsg8")
 
-[node name="Wall9" type="CSGBox3D" parent="Room" unique_id=290103315]
-transform = Transform3D(-6.9964426e-07, 0, 15.999997, 0, 15.999997, 0, -16.005995, 0, -6.993821e-07, 0, 53, -40)
-use_collision = true
-size = Vector3(0.005859375, 6.671875, 1)
-material = SubResource("StandardMaterial3D_yqkub")
-metadata/_edit_group_ = true
+[node name="DemonArea" type="Area2D" parent="." unique_id=1924989392 node_paths=PackedStringArray("spawn_cycle", "health_component") groups=["targets"]]
+scale = Vector2(0.29820248, 0.36519623)
+script = ExtResource("5_gcgl3")
+spawn_cycle = NodePath("../Spawn Cycle")
+health_component = NodePath("../HealthComponent")
 
-[node name="Floor2" type="CSGBox3D" parent="Room" unique_id=684589415]
-transform = Transform3D(16.005991, 0, 0, 0, 0.9999998, 0, 0, 0, 15.999995, -15.999999, 0, -15.999999)
-use_collision = true
-material = SubResource("StandardMaterial3D_jltlb")
-metadata/_edit_group_ = true
+[node name="Demon" type="Sprite2D" parent="DemonArea" unique_id=1655717533]
+scale = Vector2(0.6986306, 0.5382381)
+texture = ExtResource("5_51p13")
 
-[node name="Wall4" type="CSGBox3D" parent="Room" unique_id=567990189]
-transform = Transform3D(16.005991, 0, 0, 0, 15.999997, 0, 0, 0, 15.999995, -24, 53, -16)
-use_collision = true
-size = Vector3(0.005859375, 6.671875, 1)
-material = SubResource("StandardMaterial3D_yqkub")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DemonArea" unique_id=1063293512]
+scale = Vector2(11.392474, -148.62614)
+shape = SubResource("RectangleShape2D_acmuj")
 
-[node name="Wall5" type="CSGBox3D" parent="Room" unique_id=2079811451]
-transform = Transform3D(-6.996433e-07, 0, 15.999981, 0, 15.999997, 0, -16.005962, 0, -6.9938113e-07, -15.999998, 52.999992, -7.890583)
-use_collision = true
-size = Vector3(0.01953125, 6.671875, 1)
-material = SubResource("StandardMaterial3D_yqkub")
-metadata/_edit_group_ = true
+[node name="mole_died2" type="AudioStreamPlayer2D" parent="DemonArea" unique_id=915900707]
+position = Vector2(-5.1169223e-05, 0)
+scale = Vector2(3.3534267, 2.7382543)
+stream = ExtResource("23_3ymp8")
 
-[node name="Wall8" type="CSGBox3D" parent="Room" unique_id=1547119868]
-transform = Transform3D(-6.996441e-07, 0, 15.999994, 0, 15.999997, 0, -16.00599, 0, -6.993819e-07, -16, 53, -40)
-use_collision = true
-size = Vector3(0.005859375, 6.671875, 1)
-material = SubResource("StandardMaterial3D_yqkub")
-metadata/_edit_group_ = true
+[node name="MoleMachine1" type="Sprite2D" parent="." unique_id=263846383]
+light_mask = 64
+visibility_layer = 64
+position = Vector2(583, 430)
+scale = Vector2(0.78, 0.562)
+texture = ExtResource("9_ikdaa")
 
-[node name="Floor" type="CSGBox3D" parent="Room" unique_id=431409742]
-transform = Transform3D(16.005995, 0, 0, 0, 0.9999998, 0, 0, 0, 15.999997, 0, 0, -16)
-use_collision = true
-material = SubResource("StandardMaterial3D_jltlb")
-metadata/_edit_group_ = true
+[node name="Spawn Cycle" type="Node2D" parent="." unique_id=760235775 node_paths=PackedStringArray("spawn_points_parent", "demon", "angel", "timer", "score_label", "health_component")]
+script = ExtResource("11_gcgl3")
+spawn_points_parent = NodePath("Cycle/Node2D")
+demon = NodePath("../DemonArea")
+angel = NodePath("../AngelArea")
+timer = NodePath("Cycle")
+score_label = NodePath("../UI/ScoreLabel")
+health_component = NodePath("../HealthComponent")
 
-[node name="Wall" type="CSGBox3D" parent="Room" unique_id=271132320]
-transform = Transform3D(16.005993, 0, 0, 0, 15.999997, 0, 0, 0, 15.999996, 7.9999995, 52.999996, -16)
-use_collision = true
-size = Vector3(0.005859375, 6.671875, 1)
-material = SubResource("StandardMaterial3D_yqkub")
-metadata/_edit_group_ = true
+[node name="Cycle" type="Timer" parent="Spawn Cycle" unique_id=1040523257]
+wait_time = 1.5
+autostart = true
 
-[node name="Floor3" type="CSGBox3D" parent="Room" unique_id=1209280501]
-transform = Transform3D(16.00599, 0, 0, 0, 0.9999998, 0, 0, 0, 15.999994, -15.999998, 0, -32)
-use_collision = true
-material = SubResource("StandardMaterial3D_jltlb")
-metadata/_edit_group_ = true
+[node name="Node2D" type="Node2D" parent="Spawn Cycle/Cycle" unique_id=1655788203]
+position = Vector2(707, 400)
 
-[node name="Wall6" type="CSGBox3D" parent="Room" unique_id=1873371209]
-transform = Transform3D(16.005987, 0, 0, 0, 15.999997, 0, 0, 0, 15.999993, -23.999996, 52.999992, -32)
-use_collision = true
-size = Vector3(0.005859375, 6.671875, 1)
-material = SubResource("StandardMaterial3D_yqkub")
-metadata/_edit_group_ = true
+[node name="Mark 1" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=1835332044]
+light_mask = 32
+visibility_layer = 32
+position = Vector2(-333, 102)
 
-[node name="Floor4" type="CSGBox3D" parent="Room" unique_id=1775162704]
-transform = Transform3D(16.005991, 0, 0, 0, 0.9999998, 0, 0, 0, 15.999995, 0, 0, -32)
-use_collision = true
-material = SubResource("StandardMaterial3D_jltlb")
-metadata/_edit_group_ = true
+[node name="Mark 2" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=267457590]
+light_mask = 32
+visibility_layer = 32
+position = Vector2(-136, 97)
 
-[node name="Roof" type="CSGBox3D" parent="Room" unique_id=1171503609]
-transform = Transform3D(17.109282, 0, 0, 0, 0.9999998, 0, 0, 0, 16.679966, 0.4411511, 102.58161, 0.8159675)
-use_collision = true
-material = SubResource("StandardMaterial3D_jltlb")
-metadata/_edit_group_ = true
+[node name="Mark 3" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=1941249202]
+light_mask = 32
+visibility_layer = 32
+position = Vector2(65, 100)
 
-[node name="Roof2" type="CSGBox3D" parent="Room" unique_id=898635672]
-transform = Transform3D(17.109274, 0, 0, 0, 0.9999998, 0, 0, 0, 16.679962, -16.661612, 102.58161, -15.863898)
-use_collision = true
-material = SubResource("StandardMaterial3D_jltlb")
-metadata/_edit_group_ = true
+[node name="Mark 4" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=1108746892]
+light_mask = 8
+visibility_layer = 8
+position = Vector2(-283, 38)
 
-[node name="Roof3" type="CSGBox3D" parent="Room" unique_id=1196988077]
-transform = Transform3D(17.109278, 0, 0, 0, 0.9999998, 0, 0, 0, 16.679964, 0.4411511, 102.58161, -15.864001)
-use_collision = true
-material = SubResource("StandardMaterial3D_jltlb")
-metadata/_edit_group_ = true
+[node name="Mark 5" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=1231564611]
+light_mask = 8
+visibility_layer = 8
+position = Vector2(-127, 39)
 
-[node name="Roof4" type="CSGBox3D" parent="Room" unique_id=1050731894]
-transform = Transform3D(17.109272, 0, 0, 0, 0.9999998, 0, 0, 0, 16.679962, -16.66172, 102.58161, -32.54397)
-use_collision = true
-material = SubResource("StandardMaterial3D_jltlb")
-metadata/_edit_group_ = true
+[node name="Mark 6" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=1548426072]
+light_mask = 8
+visibility_layer = 8
+position = Vector2(24, 40)
 
-[node name="Roof5" type="CSGBox3D" parent="Room" unique_id=920012112]
-transform = Transform3D(17.109274, 0, 0, 0, 0.9999998, 0, 0, 0, 16.679962, 0.4411511, 102.58161, -32.54397)
-use_collision = true
-material = SubResource("StandardMaterial3D_jltlb")
-metadata/_edit_group_ = true
+[node name="Mark 7" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=1687412170]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(-256, -2)
 
-[node name="Wall7" type="CSGBox3D" parent="Room" unique_id=1792510432]
-transform = Transform3D(16.00599, 0, 0, 0, 15.999997, 0, 0, 0, 15.999994, 7.9999986, 52.999992, -32)
-use_collision = true
-size = Vector3(0.005859375, 6.671875, 1)
-material = SubResource("StandardMaterial3D_yqkub")
-metadata/_edit_group_ = true
+[node name="Mark 8" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=143340396]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(-127, -1)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=605706194]
-transform = Transform3D(0.6671166, 0, 0.74495333, 0, 1, 0, -0.74495333, 0, 0.6671166, -19.285892, 2.325368, -12.376642)
-light_energy = 0.475
-light_indirect_energy = 16.0
-light_volumetric_fog_energy = 16.0
-light_size = 10.0
-light_specular = 1.78
-distance_fade_enabled = true
-distance_fade_length = 0.0
-omni_range = 229.433
+[node name="Mark 9" type="Marker2D" parent="Spawn Cycle/Cycle/Node2D" unique_id=2122005663]
+light_mask = 2
+visibility_layer = 2
 
-[node name="Player" type="Node3D" parent="." unique_id=1621682166]
-
-[node name="CharacterBody3D" type="CharacterBody3D" parent="Player" unique_id=44594975]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.221, 2.8969283, -14.566)
-script = ExtResource("3_hltx7")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player/CharacterBody3D" unique_id=1620041743]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2070313, 0)
-shape = SubResource("CapsuleShape3D_yqkub")
-
-[node name="CSGSphere3D" type="CSGSphere3D" parent="Player/CharacterBody3D" unique_id=105698964]
-transform = Transform3D(1, 0, 0, 0, 2.9722002, 0, 0, 0, 1, 0, -1.3295282, 0)
-
-[node name="Node3D" type="Node3D" parent="Player/CharacterBody3D" unique_id=1528556164]
-transform = Transform3D(-0.8448427, 0, 0.5350148, 0, 1, 0, -0.5350148, 0, -0.8448427, 0, 0, 0)
-
-[node name="Camera3D" type="Camera3D" parent="Player/CharacterBody3D/Node3D" unique_id=984241181]
-script = ExtResource("4_shsg8")
-
-[node name="gun" type="Sprite3D" parent="Player/CharacterBody3D/Node3D/Camera3D" unique_id=884517012]
-transform = Transform3D(0.21880457, 0, -0.11647877, 0, 0.31734794, 0, 0.10994026, 0, 0.23181748, 0.73045826, -0.37252092, -0.9009266)
+[node name="Gun" type="Sprite2D" parent="." unique_id=493667617]
+position = Vector2(905, 482.99997)
+scale = Vector2(1.521563, 1.5738934)
 texture = ExtResource("1_f7cmv")
-script = ExtResource("6_ikdaa")
+script = ExtResource("4_lk3y4")
 
-[node name="RayCast3D" type="RayCast3D" parent="Player/CharacterBody3D/Node3D/Camera3D" unique_id=1187540317]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -100)
+[node name="Area2D" type="Area2D" parent="." unique_id=438861588]
+position = Vector2(-159, 238.5)
+scale = Vector2(0.37499997, 0.35156247)
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=444730965]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08622579, 0)
-script = ExtResource("7_v7144")
+[node name="Gunshot" type="Sprite2D" parent="Area2D" unique_id=1464307552]
+scale = Vector2(0.215, 0.215)
+texture = ExtResource("13_shsg8")
+script = ExtResource("8_w12x5")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="CharacterBody3D" unique_id=1959585154]
-stream = ExtResource("8_75u5r")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=160921093]
+scale = Vector2(6.973336, 6.006222)
+shape = SubResource("CircleShape2D_pm6lt")
 
-[node name="Paya Bossman" parent="CharacterBody3D" unique_id=2073370644 instance=ExtResource("9_st8jt")]
-transform = Transform3D(4, 0, 0, 0, 3.994518, 0.20934384, 0, -0.20934384, 3.994518, 0, 0, 0)
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2100982131]
+offset_left = -594.0
+offset_top = 90.99999
+offset_right = -455.0
+offset_bottom = 131.0
+scale = Vector2(3.972328, 4.4776073)
+text = "This is a gunshot ->"
+visible_characters_behavior = 1
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1109406893]
-transform = Transform3D(0.819, 0, 0, 0, 0.81, 0, 0, 0, 0.816, -0.105648935, 1.6610703, 0.23553908)
-shape = SubResource("CapsuleShape3D_pm6lt")
+[node name="UI" type="CanvasLayer" parent="." unique_id=1333481089]
 
-[node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D" unique_id=1537555555]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1858504505]
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1657680009]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = -32.0
-offset_right = 32.0
-offset_bottom = 32.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("10_w7wq1")
-
-[node name="UI" type="CanvasLayer" parent="." unique_id=724354307]
-
-[node name="ScoreLabel" type="Label" parent="UI" unique_id=1139131043]
+[node name="ScoreLabel" type="Label" parent="UI" unique_id=1819632158]
 offset_left = 12.0
 offset_top = -2.0
 offset_right = 389.0
@@ -268,31 +215,36 @@ theme_override_font_sizes/font_size = 100
 text = "Score: 0"
 script = ExtResource("16_st8jt")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="UI/ScoreLabel" unique_id=1634782982]
+[node name="CanvasLayer" type="CanvasLayer" parent="UI/ScoreLabel" unique_id=275774743]
 
-[node name="ColorRect" type="ColorRect" parent="UI" unique_id=763420725]
-visible = false
+[node name="ColorRect" type="ColorRect" parent="UI" unique_id=46696135]
 offset_right = 1148.0
 offset_bottom = 649.0
 mouse_filter = 2
 color = Color(1, 0, 0, 1)
 
-[node name="HealthComponent" type="Node" parent="." unique_id=414429853]
+[node name="ColorRect2" type="ColorRect" parent="UI" unique_id=2001961479]
+material = SubResource("ShaderMaterial_3ymp8")
+offset_right = 1148.0
+offset_bottom = 649.0
+mouse_filter = 2
+
+[node name="HealthComponent" type="Node" parent="." unique_id=346553638]
 script = ExtResource("15_ikdaa")
 
-[node name="Healthbar" type="HBoxContainer" parent="HealthComponent" unique_id=1416934531]
+[node name="Healthbar" type="HBoxContainer" parent="HealthComponent" unique_id=1648383419]
 offset_left = 1134.0
 offset_top = -122.00001
 offset_right = 1262.0
 offset_bottom = -82.00001
 scale = Vector2(2.4057, 10.654494)
 
-[node name="Control" type="Control" parent="HealthComponent/Healthbar" unique_id=445623080 node_paths=PackedStringArray("health_component")]
+[node name="Control" type="Control" parent="HealthComponent/Healthbar" unique_id=888567768 node_paths=PackedStringArray("health_component")]
 layout_mode = 2
 script = ExtResource("16_shsg8")
 health_component = NodePath("../..")
 
-[node name="TextureRect2" type="TextureRect" parent="HealthComponent/Healthbar/Control" unique_id=448498667]
+[node name="TextureRect2" type="TextureRect" parent="HealthComponent/Healthbar/Control" unique_id=496006931]
 layout_mode = 0
 offset_left = -131.99997
 offset_right = -91.99997
@@ -300,7 +252,7 @@ offset_bottom = 40.0
 texture = ExtResource("16_ikdaa")
 expand_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="HealthComponent/Healthbar/Control" unique_id=2055303314]
+[node name="TextureRect" type="TextureRect" parent="HealthComponent/Healthbar/Control" unique_id=872684878]
 layout_mode = 0
 offset_left = -87.99997
 offset_right = -47.99997
@@ -308,10 +260,42 @@ offset_bottom = 40.0
 texture = ExtResource("16_ikdaa")
 expand_mode = 2
 
-[node name="TextureRect3" type="TextureRect" parent="HealthComponent/Healthbar/Control" unique_id=608938835]
+[node name="TextureRect3" type="TextureRect" parent="HealthComponent/Healthbar/Control" unique_id=899076337]
 layout_mode = 0
 offset_left = -43.99997
 offset_right = -3.9999695
 offset_bottom = 40.0
 texture = ExtResource("16_ikdaa")
 expand_mode = 2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=489753531 node_paths=PackedStringArray("health_component", "flash_rect")]
+offset = Vector2(576, 324)
+script = ExtResource("18_ikdaa")
+health_component = NodePath("../HealthComponent")
+flash_rect = NodePath("../UI/ColorRect")
+
+[node name="Menus" type="CanvasLayer" parent="." unique_id=1573699697 node_paths=PackedStringArray("health_component", "spawn_cycle")]
+script = ExtResource("19_v7144")
+health_component = NodePath("../HealthComponent")
+spawn_cycle = NodePath("../Spawn Cycle")
+
+[node name="Sounds" type="Node2D" parent="." unique_id=1092394610]
+
+[node name="Background" type="AudioStreamPlayer" parent="Sounds" unique_id=1480556175]
+stream = ExtResource("22_w7wq1")
+autoplay = true
+
+[node name="gunshot" type="AudioStreamPlayer2D" parent="Sounds" unique_id=2133493740]
+
+[node name="player_died" type="AudioStreamPlayer2D" parent="Sounds" unique_id=165968058]
+
+[node name="player_damaged" type="AudioStreamPlayer2D" parent="Sounds" unique_id=161718017]
+
+[node name="menuclick" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1431316075]
+
+[node name="Paya" type="Node2D" parent="." unique_id=87364425]
+
+[node name="evillaugh" type="AudioStreamPlayer2D" parent="Paya" unique_id=1861722775]
+stream = ExtResource("23_3ymp8")
+
+[node name="evildamaged" type="AudioStreamPlayer2D" parent="Paya" unique_id=751410626]
