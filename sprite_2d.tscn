@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c1f32rccug6fd"]
 
 [ext_resource type="Texture2D" uid="uid://d3nvyfinmr3w5" path="res://1000_F_529266429_1atYi9eEHoiYmlQwSJyNGObrrH9I5NOs-removebg-preview.png" id="1_f7cmv"]
-[ext_resource type="Texture2D" uid="uid://7hwlwwy80vrg" path="res://images.jpeg" id="1_mehiu"]
 [ext_resource type="Texture2D" uid="uid://yfo001dc8x4e" path="res://mole machine 4.png" id="2_f166j"]
 [ext_resource type="Script" uid="uid://dqno1lvkmf7b1" path="res://Angel.gd" id="3_dbwip"]
 [ext_resource type="Texture2D" uid="uid://ccancmmqvrojv" path="res://image_1125-removebg-preview.png" id="3_lt4yx"]
@@ -29,7 +28,6 @@ size = Vector2(46.508003, 1.9160726)
 [node name="Background" type="Sprite2D" parent="." unique_id=1171308771]
 position = Vector2(577.5, 327.5)
 scale = Vector2(1.6887906, 1.4269911)
-texture = ExtResource("1_mehiu")
 
 [node name="MoleMachine(holesOnly)" type="Sprite2D" parent="." unique_id=314014585]
 position = Vector2(583, 431)

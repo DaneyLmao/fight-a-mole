@@ -1,0 +1,234 @@
+[gd_scene format=3 uid="uid://mug0t6pfu6m8"]
+
+[ext_resource type="Texture2D" uid="uid://7hwlwwy80vrg" path="res://images.jpeg" id="1_inftv"]
+[ext_resource type="Texture2D" uid="uid://d2ykuxmbcl5hl" path="res://mole machine.png" id="2_jltlb"]
+[ext_resource type="Script" uid="uid://br46cx7tyq28t" path="res://smooth.movin.gd" id="3_jkk2y"]
+[ext_resource type="Script" uid="uid://deq5ey3iuvnaf" path="res://goodaim.gd" id="4_kllkn"]
+[ext_resource type="Texture2D" uid="uid://d3nvyfinmr3w5" path="res://1000_F_529266429_1atYi9eEHoiYmlQwSJyNGObrrH9I5NOs-removebg-preview.png" id="4_nhkuo"]
+[ext_resource type="Script" uid="uid://blax5p7bqirbx" path="res://tracker3d.gd" id="5_vwhn5"]
+[ext_resource type="Texture2D" uid="uid://dv747ov6fcrsg" path="res://addons/JehenoAdvancedFirstPersonController/PlayerCharacter/HUD/crosshair.png" id="6_01ym8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jkk2y"]
+albedo_texture = ExtResource("2_jltlb")
+refraction_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jltlb"]
+albedo_texture = ExtResource("1_inftv")
+uv1_scale = Vector3(4, 4, 4)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yqkub"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yqkub"]
+height = 3.2890625
+
+[node name="Node" type="Node" unique_id=1214921645]
+
+[node name="Room" type="Node3D" parent="." unique_id=2093177920]
+transform = Transform3D(1, 0, 0, 0, 0.099653065, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Gambling Machine" type="Node3D" parent="Room" unique_id=947553615]
+transform = Transform3D(0.99999994, 0, 0, 0, 10.034814, 0, 0, 0, 0.99999994, 0, 0, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Room/Gambling Machine" unique_id=441195791]
+transform = Transform3D(0.57749486, -0.8157528, -0.0023310105, 0, -0.0020699182, 1.3783184, -0.8163943, -0.57704103, -0.0016488923, -21.548, 2.881, -9.523)
+sorting_offset = 0.5
+gi_mode = 2
+gi_lightmap_texel_scale = 5.0959
+use_collision = true
+size = Vector3(1.9578857, 4.6845093, 4.073181)
+material = SubResource("StandardMaterial3D_jkk2y")
+metadata/_edit_group_ = true
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Room/Gambling Machine" unique_id=2076397879]
+transform = Transform3D(0.57749486, -0.8157528, -0.0023310105, 0, -0.0020699182, 1.3783184, -0.8163943, -0.57704103, -0.0016488923, -21.768103, 5.2994595, -9.543893)
+use_collision = true
+size = Vector3(2.1733398, 10.070999, 8.332886)
+metadata/_edit_group_ = true
+
+[node name="Floor1" type="CSGBox3D" parent="Room" unique_id=1647733880]
+transform = Transform3D(16.005997, 0, 0, 0, 0.9999999, 0, 0, 0, 15.999998, 0, 0, 0)
+use_collision = true
+material = SubResource("StandardMaterial3D_jltlb")
+metadata/_edit_group_ = true
+
+[node name="Wall1" type="CSGBox3D" parent="Room" unique_id=463006419]
+transform = Transform3D(16.005651, 0, 0, 0, 15.999997, 0, 0, 0, 15.9998255, -8.763869, 51.32837, -0.037985783)
+use_collision = true
+size = Vector3(0.11669922, 6.671875, 1)
+material = SubResource("StandardMaterial3D_yqkub")
+metadata/_edit_group_ = true
+
+[node name="Wall2" type="CSGBox3D" parent="Room" unique_id=141234662]
+transform = Transform3D(16.005995, 0, 0, 0, 15.999997, 0, 0, 0, 15.999997, 8, 53, 0)
+use_collision = true
+size = Vector3(0.005859375, 6.671875, 1)
+material = SubResource("StandardMaterial3D_yqkub")
+metadata/_edit_group_ = true
+
+[node name="Wall3" type="CSGBox3D" parent="Room" unique_id=1038029029]
+transform = Transform3D(-6.9964426e-07, 0, 15.999997, 0, 15.999997, 0, -16.005995, 0, -6.993821e-07, 0, 53, 8)
+use_collision = true
+size = Vector3(0.005859375, 6.671875, 1)
+material = SubResource("StandardMaterial3D_yqkub")
+metadata/_edit_group_ = true
+
+[node name="Wall9" type="CSGBox3D" parent="Room" unique_id=290103315]
+transform = Transform3D(-6.9964426e-07, 0, 15.999997, 0, 15.999997, 0, -16.005995, 0, -6.993821e-07, 0, 53, -40)
+use_collision = true
+size = Vector3(0.005859375, 6.671875, 1)
+material = SubResource("StandardMaterial3D_yqkub")
+metadata/_edit_group_ = true
+
+[node name="Floor2" type="CSGBox3D" parent="Room" unique_id=684589415]
+transform = Transform3D(16.005993, 0, 0, 0, 0.9999998, 0, 0, 0, 15.999996, -16, 0, -16)
+use_collision = true
+material = SubResource("StandardMaterial3D_jltlb")
+metadata/_edit_group_ = true
+
+[node name="Wall4" type="CSGBox3D" parent="Room" unique_id=567990189]
+transform = Transform3D(16.005991, 0, 0, 0, 15.999997, 0, 0, 0, 15.999995, -24, 53, -16)
+use_collision = true
+size = Vector3(0.005859375, 6.671875, 1)
+material = SubResource("StandardMaterial3D_yqkub")
+
+[node name="Wall5" type="CSGBox3D" parent="Room" unique_id=2079811451]
+transform = Transform3D(-6.996433e-07, 0, 15.999981, 0, 15.999997, 0, -16.005962, 0, -6.9938113e-07, -15.999998, 52.999992, -7.890583)
+use_collision = true
+size = Vector3(0.01953125, 6.671875, 1)
+material = SubResource("StandardMaterial3D_yqkub")
+metadata/_edit_group_ = true
+
+[node name="Wall8" type="CSGBox3D" parent="Room" unique_id=1547119868]
+transform = Transform3D(-6.996441e-07, 0, 15.999994, 0, 15.999997, 0, -16.00599, 0, -6.993819e-07, -16, 53, -40)
+use_collision = true
+size = Vector3(0.005859375, 6.671875, 1)
+material = SubResource("StandardMaterial3D_yqkub")
+metadata/_edit_group_ = true
+
+[node name="Floor" type="CSGBox3D" parent="Room" unique_id=431409742]
+transform = Transform3D(16.005995, 0, 0, 0, 0.9999998, 0, 0, 0, 15.999997, 0, 0, -16)
+use_collision = true
+material = SubResource("StandardMaterial3D_jltlb")
+metadata/_edit_group_ = true
+
+[node name="Wall" type="CSGBox3D" parent="Room" unique_id=271132320]
+transform = Transform3D(16.005993, 0, 0, 0, 15.999997, 0, 0, 0, 15.999996, 7.9999995, 52.999996, -16)
+use_collision = true
+size = Vector3(0.005859375, 6.671875, 1)
+material = SubResource("StandardMaterial3D_yqkub")
+metadata/_edit_group_ = true
+
+[node name="Floor3" type="CSGBox3D" parent="Room" unique_id=1209280501]
+transform = Transform3D(16.00599, 0, 0, 0, 0.9999998, 0, 0, 0, 15.999994, -15.999998, 0, -32)
+use_collision = true
+material = SubResource("StandardMaterial3D_jltlb")
+metadata/_edit_group_ = true
+
+[node name="Wall6" type="CSGBox3D" parent="Room" unique_id=1873371209]
+transform = Transform3D(16.005987, 0, 0, 0, 15.999997, 0, 0, 0, 15.999993, -23.999996, 52.999992, -32)
+use_collision = true
+size = Vector3(0.005859375, 6.671875, 1)
+material = SubResource("StandardMaterial3D_yqkub")
+metadata/_edit_group_ = true
+
+[node name="Floor4" type="CSGBox3D" parent="Room" unique_id=1775162704]
+transform = Transform3D(16.005991, 0, 0, 0, 0.9999998, 0, 0, 0, 15.999995, 0, 0, -32)
+use_collision = true
+material = SubResource("StandardMaterial3D_jltlb")
+metadata/_edit_group_ = true
+
+[node name="Roof" type="CSGBox3D" parent="Room" unique_id=1171503609]
+transform = Transform3D(17.109282, 0, 0, 0, 0.9999998, 0, 0, 0, 16.679966, 0.4411511, 102.58161, 0.8159675)
+use_collision = true
+material = SubResource("StandardMaterial3D_jltlb")
+metadata/_edit_group_ = true
+
+[node name="Roof2" type="CSGBox3D" parent="Room" unique_id=898635672]
+transform = Transform3D(17.109276, 0, 0, 0, 0.9999998, 0, 0, 0, 16.679964, -16.661722, 102.58161, -15.864001)
+use_collision = true
+material = SubResource("StandardMaterial3D_jltlb")
+metadata/_edit_group_ = true
+
+[node name="Roof3" type="CSGBox3D" parent="Room" unique_id=1196988077]
+transform = Transform3D(17.109278, 0, 0, 0, 0.9999998, 0, 0, 0, 16.679964, 0.4411511, 102.58161, -15.864001)
+use_collision = true
+material = SubResource("StandardMaterial3D_jltlb")
+metadata/_edit_group_ = true
+
+[node name="Roof4" type="CSGBox3D" parent="Room" unique_id=1050731894]
+transform = Transform3D(17.109272, 0, 0, 0, 0.9999998, 0, 0, 0, 16.679962, -16.66172, 102.58161, -32.54397)
+use_collision = true
+material = SubResource("StandardMaterial3D_jltlb")
+metadata/_edit_group_ = true
+
+[node name="Roof5" type="CSGBox3D" parent="Room" unique_id=920012112]
+transform = Transform3D(17.109274, 0, 0, 0, 0.9999998, 0, 0, 0, 16.679962, 0.4411511, 102.58161, -32.54397)
+use_collision = true
+material = SubResource("StandardMaterial3D_jltlb")
+metadata/_edit_group_ = true
+
+[node name="Wall7" type="CSGBox3D" parent="Room" unique_id=1792510432]
+transform = Transform3D(16.00599, 0, 0, 0, 15.999997, 0, 0, 0, 15.999994, 7.9999986, 52.999992, -32)
+use_collision = true
+size = Vector3(0.005859375, 6.671875, 1)
+material = SubResource("StandardMaterial3D_yqkub")
+metadata/_edit_group_ = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=605706194]
+transform = Transform3D(0.6671166, 0, 0.74495333, 0, 1, 0, -0.74495333, 0, 0.6671166, -19.285892, 2.325368, -12.376642)
+light_energy = 1.64
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 16.0
+light_size = 10.0
+light_specular = 1.78
+distance_fade_enabled = true
+distance_fade_length = 0.0
+omni_range = 229.433
+
+[node name="Player" type="Node3D" parent="." unique_id=1621682166]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="Player" unique_id=44594975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07940149, 6.3056207, -17.642273)
+script = ExtResource("3_jkk2y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player/CharacterBody3D" unique_id=1620041743]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2070313, 0)
+shape = SubResource("CapsuleShape3D_yqkub")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Player/CharacterBody3D" unique_id=105698964]
+transform = Transform3D(1, 0, 0, 0, 2.9722002, 0, 0, 0, 1, 0, -1.3295282, 0)
+
+[node name="Node3D" type="Node3D" parent="Player/CharacterBody3D" unique_id=1528556164]
+transform = Transform3D(-0.8448427, 0, 0.5350148, 0, 1, 0, -0.5350148, 0, -0.8448427, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Player/CharacterBody3D/Node3D" unique_id=984241181]
+script = ExtResource("4_kllkn")
+
+[node name="gun" type="Sprite3D" parent="Player/CharacterBody3D/Node3D/Camera3D" unique_id=884517012]
+transform = Transform3D(0.21880457, 0, -0.11647877, 0, 0.31734794, 0, 0.10994026, 0, 0.23181748, 0.73045826, -0.37252092, -0.9009266)
+texture = ExtResource("4_nhkuo")
+script = ExtResource("5_vwhn5")
+
+[node name="RayCast3D" type="RayCast3D" parent="Player/CharacterBody3D/Node3D/Camera3D" unique_id=1187540317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -100)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1858504505]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1657680009]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_01ym8")
+
+[node name="bad" type="CSGBox3D" parent="." unique_id=620271796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -36.500652)
+use_collision = true
