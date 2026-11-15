@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://d3nvyfinmr3w5" path="res://1000_F_529266429_1atYi9eEHoiYmlQwSJyNGObrrH9I5NOs-removebg-preview.png" id="4_nhkuo"]
 [ext_resource type="Script" uid="uid://blax5p7bqirbx" path="res://tracker3d.gd" id="5_vwhn5"]
 [ext_resource type="Texture2D" uid="uid://dv747ov6fcrsg" path="res://addons/JehenoAdvancedFirstPersonController/PlayerCharacter/HUD/crosshair.png" id="6_01ym8"]
-[ext_resource type="ArrayMesh" uid="uid://cke4ujpll0utr" path="res://tinker.obj" id="8_160f7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jkk2y"]
 albedo_texture = ExtResource("2_jltlb")
@@ -146,7 +145,7 @@ material = SubResource("StandardMaterial3D_jltlb")
 metadata/_edit_group_ = true
 
 [node name="Roof2" type="CSGBox3D" parent="Room" unique_id=898635672]
-transform = Transform3D(17.109276, 0, 0, 0, 0.9999998, 0, 0, 0, 16.679964, -16.661722, 102.58161, -15.864001)
+transform = Transform3D(17.109274, 0, 0, 0, 0.9999998, 0, 0, 0, 16.679962, -16.661612, 102.58161, -15.863898)
 use_collision = true
 material = SubResource("StandardMaterial3D_jltlb")
 metadata/_edit_group_ = true
@@ -190,7 +189,7 @@ omni_range = 229.433
 [node name="Player" type="Node3D" parent="." unique_id=1621682166]
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="Player" unique_id=44594975]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07940149, 6.3056207, -17.642273)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.370521, 6.3056207, -15.762724)
 script = ExtResource("3_jkk2y")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player/CharacterBody3D" unique_id=1620041743]
@@ -236,8 +235,4 @@ use_collision = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1642843570]
 transform = Transform3D(0.022943057, -0.03276608, -1.4322509e-09, 0, -1.7484555e-09, 0.04, -0.03276608, -0.022943057, -1.0028729e-09, -21.03, 0, -12.229)
-HEAD
-gi_mode = 2
 gi_lightmap_texel_scale = 16.0
-7a7a9be1ed227f47c7b2c8918fa8e0a951c63bf6
-mesh = ExtResource("8_160f7")
