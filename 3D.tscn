@@ -236,4 +236,6 @@ use_collision = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1642843570]
 transform = Transform3D(0.022943057, -0.03276608, -1.4322509e-09, 0, -1.7484555e-09, 0.04, -0.03276608, -0.022943057, -1.0028729e-09, -21.03, 0, -12.229)
+gi_mode = 0
+gi_lightmap_texel_scale = 0.01
 mesh = ExtResource("8_160f7")
