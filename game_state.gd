@@ -21,6 +21,7 @@ func reset() -> void:
 
 func add_score(points: int) -> void:
 	score += points
+	print("SCORE UPDATED: ", score)
 	score_changed.emit(score)
 
 func set_health(value: int) -> void:

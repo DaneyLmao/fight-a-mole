@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://d3nvyfinmr3w5" path="res://1000_F_529266429_1atYi9eEHoiYmlQwSJyNGObrrH9I5NOs-removebg-preview.png" id="4_nhkuo"]
 [ext_resource type="Script" uid="uid://blax5p7bqirbx" path="res://tracker3d.gd" id="5_vwhn5"]
 [ext_resource type="Texture2D" uid="uid://dv747ov6fcrsg" path="res://addons/JehenoAdvancedFirstPersonController/PlayerCharacter/HUD/crosshair.png" id="6_01ym8"]
+[ext_resource type="Script" uid="uid://b6fga5v5mgwrk" path="res://health_component.gd" id="8_oxv02"]
+[ext_resource type="Script" uid="uid://brmr2e251fdgh" path="res://score_label_3D.gd" id="8_ty56h"]
+[ext_resource type="Script" uid="uid://dlqxau7kf5fdj" path="res://texturerect.health.gd" id="9_ty56h"]
+[ext_resource type="Texture2D" uid="uid://b8kbqtys7e3ba" path="res://full_heart.png" id="10_jwkbx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jkk2y"]
 albedo_texture = ExtResource("2_jltlb")
@@ -233,6 +237,62 @@ texture = ExtResource("6_01ym8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -36.500652)
 use_collision = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1642843570]
-transform = Transform3D(0.022943057, -0.03276608, -1.4322509e-09, 0, -1.7484555e-09, 0.04, -0.03276608, -0.022943057, -1.0028729e-09, -21.03, 0, -12.229)
-gi_lightmap_texel_scale = 16.0
+[node name="UI" type="CanvasLayer" parent="." unique_id=724354307]
+
+[node name="ScoreLabel" type="Label" parent="UI" unique_id=1139131043]
+offset_left = 12.0
+offset_top = -2.0
+offset_right = 389.0
+offset_bottom = 135.0
+scale = Vector2(0.7693708, 0.7618696)
+theme_override_font_sizes/font_size = 100
+text = "Score: 0"
+script = ExtResource("8_ty56h")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="UI/ScoreLabel" unique_id=1634782982]
+
+[node name="ColorRect" type="ColorRect" parent="UI" unique_id=763420725]
+visible = false
+offset_right = 1148.0
+offset_bottom = 649.0
+mouse_filter = 2
+color = Color(1, 0, 0, 1)
+
+[node name="HealthComponent" type="Node" parent="." unique_id=414429853]
+script = ExtResource("8_oxv02")
+
+[node name="Healthbar" type="HBoxContainer" parent="HealthComponent" unique_id=1416934531]
+offset_left = 1134.0
+offset_top = -122.00001
+offset_right = 1262.0
+offset_bottom = -82.00001
+scale = Vector2(2.4057, 10.654494)
+
+[node name="Control" type="Control" parent="HealthComponent/Healthbar" unique_id=445623080 node_paths=PackedStringArray("health_component")]
+layout_mode = 2
+script = ExtResource("9_ty56h")
+health_component = NodePath("../..")
+
+[node name="TextureRect2" type="TextureRect" parent="HealthComponent/Healthbar/Control" unique_id=448498667]
+layout_mode = 0
+offset_left = -131.99997
+offset_right = -91.99997
+offset_bottom = 40.0
+texture = ExtResource("10_jwkbx")
+expand_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HealthComponent/Healthbar/Control" unique_id=2055303314]
+layout_mode = 0
+offset_left = -87.99997
+offset_right = -47.99997
+offset_bottom = 40.0
+texture = ExtResource("10_jwkbx")
+expand_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="HealthComponent/Healthbar/Control" unique_id=608938835]
+layout_mode = 0
+offset_left = -43.99997
+offset_right = -3.9999695
+offset_bottom = 40.0
+texture = ExtResource("10_jwkbx")
+expand_mode = 2

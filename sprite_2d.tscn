@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://b6fga5v5mgwrk" path="res://health_component.gd" id="15_ikdaa"]
 [ext_resource type="Texture2D" uid="uid://b8kbqtys7e3ba" path="res://full_heart.png" id="16_ikdaa"]
 [ext_resource type="Script" uid="uid://dlqxau7kf5fdj" path="res://texturerect.health.gd" id="16_shsg8"]
+[ext_resource type="Script" uid="uid://brmr2e251fdgh" path="res://score_label_3D.gd" id="16_st8jt"]
 [ext_resource type="Script" uid="uid://ckj8dpf8ek81s" path="res://damage.fx.gd" id="18_ikdaa"]
 [ext_resource type="Script" uid="uid://dmjt4geois14o" path="res://menus.gd" id="19_v7144"]
 
@@ -193,6 +194,7 @@ offset_bottom = 135.0
 scale = Vector2(0.7693708, 0.7618696)
 theme_override_font_sizes/font_size = 100
 text = "Score: 0"
+script = ExtResource("16_st8jt")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="UI/ScoreLabel" unique_id=275774743]
 
