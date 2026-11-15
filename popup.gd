@@ -35,7 +35,8 @@ func _on_timer_timeout() -> void:
 func set_area_active(area: Area2D, active: bool) -> void:
 	area.visible = active
 	area.monitoring = active
-	area.monitorable = active
+	area.monitorable = active        
+	set_deferred("disabled", !active)
 	
 @export var score_label: Label
 var score: int = 0

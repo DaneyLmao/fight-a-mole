@@ -33,6 +33,7 @@ scale = Vector2(0.7797008, 0.5617595)
 texture = ExtResource("2_lt4yx")
 
 [node name="AngelArea" type="Area2D" parent="." unique_id=810197337 node_paths=PackedStringArray("spawn_cycle") groups=["targets"]]
+position = Vector2(248.00003, 144.00002)
 scale = Vector2(0.29820246, 0.3651962)
 script = ExtResource("3_dbwip")
 spawn_cycle = NodePath("../Spawn Cycle")

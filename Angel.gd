@@ -11,3 +11,4 @@ func hit() -> void:
 	hide()
 	set_deferred("monitoring", false)
 	set_deferred("monitorable", false)
+	$CollisionShape2D.set_deferred("disabled", true)
