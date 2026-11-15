@@ -31,9 +31,7 @@ height = 3.2890625
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pm6lt"]
 radius = 0.67285156
-height = 4.8581924
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_d2l6o"]
+height = 4.1467285
 
 [node name="Node" type="Node" unique_id=1214921645]
 
@@ -201,7 +199,7 @@ omni_range = 229.433
 
 [node name="Player" type="Node3D" parent="." unique_id=1621682166]
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="Player" unique_id=44594975 groups=["player"]]
+[node name="CharacterBody3D" type="CharacterBody3D" parent="Player" unique_id=44594975]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.221, 2.8969283, -14.566)
 script = ExtResource("3_jkk2y")
 
@@ -237,15 +235,10 @@ stream = ExtResource("8_7631t")
 transform = Transform3D(4, 0, 0, 0, 3.994518, 0.20934384, 0, -0.20934384, 3.994518, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1109406893]
-transform = Transform3D(0.819, 0, 0, 0, 0.81, 0, 0, 0, 0.816, -0.105648935, 2.0477948, 0.23553908)
+transform = Transform3D(0.819, 0, 0, 0, 0.81, 0, 0, 0, 0.816, -0.105648935, 1.6610703, 0.23553908)
 shape = SubResource("CapsuleShape3D_pm6lt")
 
 [node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D" unique_id=1537555555]
-
-[node name="Paya Bossman Hitbox" type="CSGBox3D" parent="CharacterBody3D" unique_id=1083480524]
-transform = Transform3D(4, 0, 0, 0, 3.994518, 0.20934384, 0, -0.20934384, 3.994518, -0.10952824, 1.8150265, 0.20364177)
-size = Vector3(0.20880127, 0.88597107, 0.175354)
-material = SubResource("ShaderMaterial_d2l6o")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1858504505]
 
