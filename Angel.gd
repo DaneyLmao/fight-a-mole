@@ -1,11 +1,10 @@
 extends Area2D
 
 @export var spawn_cycle: Node
-@export var point_value: int = 10 # Set to positive for Angel, negative for Demon
+@export var point_value: int = 10
 
 func hit() -> void:
 	print("Who's Mommy's Pretty Boy?")
-	
 	if spawn_cycle:
 		spawn_cycle.add_score(point_value)
 	

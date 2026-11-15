@@ -8,12 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://bp6umqqcwgjv0" path="res://image_2026-11-14_130338650.png" id="5_51p13"]
 [ext_resource type="Script" uid="uid://0q68fxycimyn" path="res://Demon.gd" id="5_gcgl3"]
 [ext_resource type="Texture2D" uid="uid://vk4pisym2d5u" path="res://mole machine 3.png" id="5_hltx7"]
-[ext_resource type="Texture2D" uid="uid://darfl3cddydvj" path="res://icon.svg" id="7_q2pai"]
 [ext_resource type="Texture2D" uid="uid://cax6vf53b0tgj" path="res://mole machine 2.png" id="8_shsg8"]
 [ext_resource type="Script" uid="uid://cmho4mc62fsv" path="res://Gunshot.gd" id="8_w12x5"]
 [ext_resource type="Texture2D" uid="uid://duc2i0jc270tv" path="res://mole machine 1.png" id="9_ikdaa"]
 [ext_resource type="Texture2D" uid="uid://ctudhgp2yk54r" path="res://mole machine (holes only).png" id="10_v7144"]
 [ext_resource type="Script" uid="uid://3atf7pe6u1ph" path="res://popup.gd" id="11_gcgl3"]
+[ext_resource type="Texture2D" uid="uid://cvybju1gmxh8r" path="res://acid splash.png" id="13_shsg8"]
 [ext_resource type="Script" uid="uid://b6fga5v5mgwrk" path="res://health_component.gd" id="15_ikdaa"]
 [ext_resource type="Texture2D" uid="uid://b8kbqtys7e3ba" path="res://full_heart.png" id="16_ikdaa"]
 [ext_resource type="Script" uid="uid://dlqxau7kf5fdj" path="res://texturerect.health.gd" id="16_shsg8"]
@@ -70,10 +70,11 @@ position = Vector2(583, 431)
 scale = Vector2(0.78, 0.562)
 texture = ExtResource("8_shsg8")
 
-[node name="DemonArea" type="Area2D" parent="." unique_id=1924989392 node_paths=PackedStringArray("spawn_cycle") groups=["targets"]]
+[node name="DemonArea" type="Area2D" parent="." unique_id=1924989392 node_paths=PackedStringArray("spawn_cycle", "health_component") groups=["targets"]]
 scale = Vector2(0.29820248, 0.36519623)
 script = ExtResource("5_gcgl3")
 spawn_cycle = NodePath("../Spawn Cycle")
+health_component = NodePath("../HealthComponent")
 
 [node name="Demon" type="Sprite2D" parent="DemonArea" unique_id=1655717533]
 scale = Vector2(0.6986306, 0.5382381)
@@ -90,14 +91,19 @@ position = Vector2(583, 431)
 scale = Vector2(0.78, 0.562)
 texture = ExtResource("9_ikdaa")
 
+<<<<<<< HEAD
 [node name="Spawn Cycle" type="Node2D" parent="." unique_id=760235775 node_paths=PackedStringArray("spawn_points_parent", "demon", "angel", "timer", "score_label")]
 position = Vector2(7, 5)
+=======
+[node name="Spawn Cycle" type="Node2D" parent="." unique_id=760235775 node_paths=PackedStringArray("spawn_points_parent", "demon", "angel", "timer", "score_label", "health_component")]
+>>>>>>> fbfbc98f09612a11dee3ebc57f1ce34ac086465e
 script = ExtResource("11_gcgl3")
 spawn_points_parent = NodePath("Cycle/Node2D")
 demon = NodePath("../DemonArea")
 angel = NodePath("../AngelArea")
 timer = NodePath("Cycle")
 score_label = NodePath("../UI/ScoreLabel")
+health_component = NodePath("../HealthComponent")
 
 [node name="Cycle" type="Timer" parent="Spawn Cycle" unique_id=1040523257]
 wait_time = 1.5
@@ -161,8 +167,8 @@ position = Vector2(-159, 238.5)
 scale = Vector2(0.37499997, 0.35156247)
 
 [node name="Gunshot" type="Sprite2D" parent="Area2D" unique_id=1464307552]
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("7_q2pai")
+scale = Vector2(0.215, 0.215)
+texture = ExtResource("13_shsg8")
 script = ExtResource("8_w12x5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=160921093]
@@ -195,10 +201,10 @@ text = "Score: 0"
 script = ExtResource("15_ikdaa")
 
 [node name="Healthbar" type="HBoxContainer" parent="HealthComponent" unique_id=1648383419]
-offset_left = 817.0
-offset_top = -129.0
-offset_right = 945.0
-offset_bottom = -89.0
+offset_left = 1134.0
+offset_top = -122.00001
+offset_right = 1262.0
+offset_bottom = -82.00001
 scale = Vector2(2.4057, 10.654494)
 
 [node name="Control" type="Control" parent="HealthComponent/Healthbar" unique_id=888567768 node_paths=PackedStringArray("health_component")]

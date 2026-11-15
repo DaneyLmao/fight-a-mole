@@ -23,4 +23,4 @@ func check_hit_scan() -> void:
 	if result:
 		var hit_object = result.collider
 		if hit_object is CSGBox3D:
-			print("Shot CSG Box: ", hit_object.name)
+			print("my beautiful boy just shot his load on the ", hit_object.name,)
