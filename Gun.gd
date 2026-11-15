@@ -5,6 +5,10 @@ extends Sprite2D
 
 var anchor_position: Vector2
 
+# Cooldown variables (0.25 seconds = 250 milliseconds)
+var fire_cooldown_ms: float = 250.0
+var last_shot_time: float = -1000.0
+
 func _ready() -> void:
 	anchor_position = global_position
 
@@ -26,6 +30,14 @@ var recoil_tween: Tween
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("shoot"):
+		var current_time = Time.get_ticks_msec()
+		
+		# Check if the cooldown has elapsed since the last shot
+		if current_time - last_shot_time < fire_cooldown_ms:
+			return # Exit early if still cooling down
+			
+		last_shot_time = current_time # Update last shot timestamp
+		
 		# Stop any active rotation so rapid clicks don't stack or drift
 		if recoil_tween and recoil_tween.is_valid():
 			recoil_tween.kill()
@@ -35,4 +47,3 @@ func _input(event: InputEvent) -> void:
 		recoil_tween.tween_property(self, "rotation_degrees", 30.0, 0.08).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 		# 2. Ease back down to 0 degrees (over 0.42s, totaling 0.5s)
 		recoil_tween.tween_property(self, "rotation_degrees", 0.0, 0.42).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
-	

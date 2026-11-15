@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d3nvyfinmr3w5" path="res://1000_F_529266429_1atYi9eEHoiYmlQwSJyNGObrrH9I5NOs-removebg-preview.png" id="4_nhkuo"]
 [ext_resource type="Script" uid="uid://blax5p7bqirbx" path="res://tracker3d.gd" id="5_vwhn5"]
 [ext_resource type="Texture2D" uid="uid://dv747ov6fcrsg" path="res://addons/JehenoAdvancedFirstPersonController/PlayerCharacter/HUD/crosshair.png" id="6_01ym8"]
+[ext_resource type="AudioStream" uid="uid://dmbud1q2prua7" path="res://molarity.ogg" id="8_7631t"]
 [ext_resource type="Script" uid="uid://befwidj11vl42" path="res://bad.gd" id="8_jwkbx"]
 [ext_resource type="Script" uid="uid://b6fga5v5mgwrk" path="res://health_component.gd" id="8_oxv02"]
 [ext_resource type="Script" uid="uid://brmr2e251fdgh" path="res://score_label_3D.gd" id="8_ty56h"]
@@ -222,6 +223,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -100)
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=444730965]
 script = ExtResource("8_jwkbx")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="CharacterBody3D" unique_id=1959585154]
+stream = ExtResource("8_7631t")
 
 [node name="bad" type="CSGBox3D" parent="CharacterBody3D" unique_id=620271796]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
