@@ -27,6 +27,8 @@ func _on_timer_timeout() -> void:
 		set_area_active(demon, true)
 		set_area_active(angel, true)
 		timer.start(1.2)
+		angel.reset()
+		demon.reset()
 	else:
 		set_area_active(demon, false)
 		set_area_active(angel, false)
@@ -35,7 +37,7 @@ func _on_timer_timeout() -> void:
 func set_area_active(area: Area2D, active: bool) -> void:
 	area.visible = active
 	area.monitoring = active
-	area.monitorable = active
+	area.monitorable = active        
 	
 @export var score_label: Label
 var score: int = 0
